@@ -1,12 +1,12 @@
 using System;
 namespace Gimmie.Core.Interfaces
 {
-public interface ICommand
-{
-    event EventHandler OnError;
+    public interface ICommand
+    {
+        event EventHandler CommandError;
 
-    event EventHandler OnSuccess;
-     void Excute();
-    
-}
+        event EventHandler CommandComplete;
+        void Execute();
+
+    }
 }
